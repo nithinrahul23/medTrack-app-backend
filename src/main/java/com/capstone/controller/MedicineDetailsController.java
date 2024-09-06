@@ -1,11 +1,10 @@
-package com.capstone.dao;
+package com.capstone.controller;
 
 import com.capstone.entity.MedicineDetails;
 import com.capstone.entity.MedicineType;
 import com.capstone.exception.AppException;
 import com.capstone.service.MedicineDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,7 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/medicoApp")
 @CrossOrigin
-public class MedicineDetailsDao {
+public class MedicineDetailsController {
 
     @Autowired
     private MedicineDetailsService medicineDetailsService;

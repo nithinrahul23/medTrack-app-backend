@@ -1,22 +1,15 @@
-package com.capstone.dao;
+package com.capstone.controller;
 
 import com.capstone.entity.JwtResponse;
 import com.capstone.entity.User;
 import com.capstone.entity.UserLogin;
 import com.capstone.exception.AppException;
-import com.capstone.service.JwtService;
 import com.capstone.service.MyUserDetailsService;
 import com.capstone.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,7 +17,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value="/medicoApp")
 @CrossOrigin
-public class UserDao {
+public class UserController {
 
     @Autowired
     private UserService userService;
